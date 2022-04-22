@@ -1,4 +1,5 @@
 import json
+import re
 
 def get_count_users(data:dict) -> int:
     """
@@ -9,8 +10,15 @@ def get_count_users(data:dict) -> int:
     Returns:
         int: number of users
     """
+    a=data['results']
+    c=0
+    for i in a:
+        c+=1
+        print(c)
     
-    return len(data)
+    return 
+    
+    
 f=open('randomuser_data.json').read()
 data=json.loads(f)
 print(get_count_users(data))
